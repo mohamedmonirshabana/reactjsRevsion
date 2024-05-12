@@ -19,13 +19,19 @@ function PostsList({ isPosting, onStopPosting }) {
           <NewPost onCancel={onStopPosting} onAddPost={addPostHandler} />
         </Modal>
       )}
-
-      <ul className={classes.posts}>
-        {posts.map((post) => (
-          <Post key={Math.random()} author={post.author} body={post.body} />
-        ))}
-        {/* <Post author="Manual" body="Next JS 's Development" /> */}
-      </ul>
+      {posts.length > 0 && (
+        <ul className={classes.posts}>
+          {posts.map((post) => (
+            <Post key={Math.random()} author={post.author} body={post.body} />
+          ))}
+        </ul>
+      )}
+      {posts.length === 0 && (
+        <div style={{ textAlign: 'center', color: 'white' }}>
+          <h1>Not Post yet</h1>
+          <p>Start Adding some!</p>
+        </div>
+      )}
     </>
   );
 }

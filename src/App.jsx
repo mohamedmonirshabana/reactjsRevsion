@@ -1,7 +1,7 @@
 import Post from './components/Post';
 function App() {
   return (
-    <div style={{ color: 'red', textAlign: 'left' }}>
+    <div className="post">
       <Post author="Maximilian" body="Reactjs is awesome!" />
       <Post author="Manual" body="Next JS 's Development" />
     </div>

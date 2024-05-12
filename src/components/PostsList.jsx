@@ -6,13 +6,13 @@ import NewPost from './NewPost.jsx';
 function PostsList() {
   const [enteredBody, setEnteredBody] = useState('');
 
-  function getData(data) {
-    setEnteredBody(data);
+  function bodyChangeHandler(event) {
+    setEnteredBody(event.target.value);
   }
 
   return (
     <>
-      <NewPost handle={getData} />
+      <NewPost onBodyChange={bodyChangeHandler} />
       <ul className={classes.posts}>
         <Post author="Maximilian" body={enteredBody} />
         <Post author="Manual" body="Next JS 's Development" />

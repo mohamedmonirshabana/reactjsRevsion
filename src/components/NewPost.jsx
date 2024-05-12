@@ -7,10 +7,9 @@ function NewPost(props) {
         <label htmlFor="body">Text</label>
         <textarea id="body" required rows={3} onChange={props.onBodyChange} />
       </p>
-      <p>{enteredBody}</p>
       <p>
         <label htmlFor="name">Your Name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" required onChange={props.onAuthorChange} />
       </p>
     </form>
   );

@@ -5,12 +5,6 @@ import Modal from './Modal.jsx';
 import classes from './PostList.module.css';
 import NewPost from './NewPost.jsx';
 function PostsList({ isPosting, onStopPosting }) {
-  // fetch('http://localhost:8080/posts')
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     setPosts(data.posts);
-  //   });
-  //Code can make infinit Loop
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {

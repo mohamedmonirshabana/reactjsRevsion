@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Post from './Post';
 import classes from './PostList.module.css';
 import NewPost from './NewPost.jsx';

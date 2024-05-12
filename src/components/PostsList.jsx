@@ -20,20 +20,28 @@ function PostsList() {
   function hideModalHandler() {
     setModalIsVisible(false);
   }
-  let modalContent;
-  if (modalIsVisible) {
-    modalContent = (
-      <Modal onClose={hideModalHandler}>
-        <NewPost
-          onBodyChange={bodyChangeHandler}
-          onAuthorChange={authorChangeHandler}
-        />
-      </Modal>
-    );
-  }
+  // let modalContent;
+  // if (modalIsVisible) {
+  //   modalContent = (
+  //     <Modal onClose={hideModalHandler}>
+  //       <NewPost
+  //         onBodyChange={bodyChangeHandler}
+  //         onAuthorChange={authorChangeHandler}
+  //       />
+  //     </Modal>
+  //   );
+
+  // }
   return (
     <>
-      {modalContent}
+      {modalIsVisible && (
+        <Modal onClose={hideModalHandler}>
+          <NewPost
+            onBodyChange={bodyChangeHandler}
+            onAuthorChange={authorChangeHandler}
+          />
+        </Modal>
+      )}
 
       <ul className={classes.posts}>
         <Post author={enteredAuthor} body={enteredBody} />

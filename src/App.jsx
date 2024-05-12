@@ -1,10 +1,10 @@
 import Post from './components/Post';
 function App() {
   return (
-    <main>
+    <div style={{ color: 'red', textAlign: 'left' }}>
       <Post author="Maximilian" body="Reactjs is awesome!" />
       <Post author="Manual" body="Next JS 's Development" />
-    </main>
+    </div>
   );
 }
 

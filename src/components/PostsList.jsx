@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Post from './Post';
 import Modal from './Modal.jsx';
 import classes from './PostList.module.css';
-import NewPost from './NewPost.jsx';
+import NewPost from '../routes/NewPost.jsx';
 function PostsList({ isPosting, onStopPosting }) {
   const [posts, setPosts] = useState([]);
   const [isFetching, setIsFetching] = useState(false);

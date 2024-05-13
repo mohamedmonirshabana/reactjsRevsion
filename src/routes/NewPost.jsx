@@ -21,8 +21,13 @@ function NewPost({ onAddPost }) {
       body: enteredBody,
       author: enteredAuthor,
     };
-    console.log(postData);
-    onAddPost(postData);
+    fetch('http://localhost:8080/posts', {
+      method: 'POST',
+      body: JSON.stringify(postData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   }
 
   return (

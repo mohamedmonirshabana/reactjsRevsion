@@ -4,7 +4,7 @@ import classes from './Modal.module.css';
 function Modal({ children }) {
   const navigate = useNavigate();
   function closeHandler() {
-    navigate('/');
+    navigate('..'); //move up one level
   }
   return (
     <>
